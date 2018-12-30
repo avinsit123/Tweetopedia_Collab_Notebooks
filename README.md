@@ -44,7 +44,7 @@ Replace the parameters that you changed in the above line of code and replace "/
 
 ## 2.Trump Tweet Generator
 
-In this project I have personally mined and cleaned 3240 Trump's Tweets.You can see my method <a href="#">in this repository</a>.Now I have used a character-Level LSTM which takes in one character a time and predicts the next character.I have used Udacity's notebook Directly for this task.They have an amazing <a href="#">repository of code</a> containing pytorch implementaions of every NN Architecture possible.Open the <a href="#">notebook</a> and start running all the cells sequentially until you reach the cell
+In this project I have personally mined and cleaned 3240 Trump's Tweets.You can see my method <a href="https://github.com/avinsit123/Tweet_Like_Trump/tree/master/TweetlikeTrump">in this repository</a>.Now I have used a character-Level LSTM which takes in one character a time and predicts the next character.I have used Udacity's notebook Directly for this task.They have an amazing <a href="https://github.com/avinsit123/deep-learning-v2-pytorch">repository of code</a> containing pytorch implementaions of every NN Architecture possible.Open the <a href="https://github.com/avinsit123/Tweetopedia_Collab_Notebooks/blob/master/Trump_Tweet_Generator.ipynb">notebook</a> and start running all the cells sequentially until you reach the cell
 ```python
 # define and print the net
 n_hidden=512        #Dimensions of the hidden layer
