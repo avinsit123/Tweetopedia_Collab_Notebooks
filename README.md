@@ -4,7 +4,7 @@ This is a collection of all the notebooks that I used in order to train Neural N
 <br>
 
 
-## Query based Sentiment Analysis
+## 1.Query based Sentiment Analysis
 Open <a href = "https://github.com/avinsit123/Tweetopedia_Collab_Notebooks/blob/master/Query_based_Convolutional_Sentiment_Analysis.ipynb" >this notebook</a> in collab by clicking the button on top of the notebook.
 I have used a Convolutional Neural Network to perform sentiment Analysis.Go Ahead and Read the Notebook to understand more about how the process has been carried out.Run all the cells in a sequential order until you reach the cell with the contents
 ```python
@@ -41,3 +41,33 @@ def goloader(tweet):
        checkpoint = torch.load(f,map_location='cpu')
 ```
 Replace the parameters that you changed in the above line of code and replace "/Users/r17935avinash/Downloads/hateorlove.pth" with your copied source path and run the project.
+
+## 2.Trump Tweet Generator
+
+In this project I have personally mined and cleaned 3240 Trump's Tweets.You can see my method <a href="#">in this repository</a>.Now I have used a character-Level LSTM which takes in one character a time and predicts the next character.I have used Udacity's notebook Directly for this task.They have an amazing <a href="#">repository of code</a> containing pytorch implementaions of every NN Architecture possible.Open the <a href="#">notebook</a> and start running all the cells sequentially until you reach the cell
+```python
+# define and print the net
+n_hidden=512        #Dimensions of the hidden layer
+n_layers=2          #No.of layers of LSTM
+batch_size = 128    #Batch size(The smaller the better accurate)
+seq_length = 100    #Sequence Length is the total no.of LSTMs in one layers side-by-side
+n_epochs = 20       #Start smaller if you are just testing initial behavior
+dropout = 0.5
+lr1 = 0.001.         #This is the learning rate
+```
+
+These are the parameters for the Neural Network.Which you can change to improve Accuracy.Finally After you run all your cells.A checkpoint file will be generated.To Download the file,open the files tab on the right portion of the window.Double-Click on the .pth file and It would automatically start downloading the file.<br>
+
+Copy the source path of the checkpoint file on your local computer.And open the python file with the below give directory.
+```
+/Tweet-o-pedia/mysite/Tweet_Generator/LSTMModel.py
+```
+and go to the line
+```python
+def LoadModel():
+    with open('/Users/r17935avinash/Desktop/Trump_Tweet_Analysis/mysite/Tweet_Generator/rnn_final.net', 'rb') as f:
+        checkpoint = torch.load(f,map_location='cpu')
+```
+Copy the Source Path of the .pth file and and replace '/Users/r17935avinash/Desktop/Trump_Tweet_Analysis/mysite/Tweet_Generator/rnn_final.net' with that path.
+
+## Hate-o-meter
