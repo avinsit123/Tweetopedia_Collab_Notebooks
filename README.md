@@ -71,3 +71,22 @@ def LoadModel():
 Copy the Source Path of the .pth file and and replace '/Users/r17935avinash/Desktop/Trump_Tweet_Analysis/mysite/Tweet_Generator/rnn_final.net' with that path.
 
 ## Hate-o-meter
+
+Open the <a href = "#">notebook</a>  by and open in collab using the button given at the top.Run all the cells sequentially until you reach the below given cell.
+```python
+model ,losses, validation_losses = train_model(target='is_hate_speech', hidden_dim=100,
+                                        batch_size=50, epochs=5,
+                                        print_every=150, log_every=5,
+                                        num_layers=4, dropout=0.1)
+```
+
+Change the parameters of the above given cell to optimize the accuracy and continue running all the cells below.Finally,after running the final cell.Download checkpoint file and move to 
+```
+/Tweet-o-pedia/mysite/hate_o_meter/views.py
+```
+and then further to the line .
+```python
+with open('/Users/r17935avinash/Downloads/hateme.pth', 'rb') as f:
+       checkpoint = torch.load(f,map_location='cpu')
+```
+and change the give path with the source path of the downloaded checkpoint file.
